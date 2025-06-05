@@ -1,0 +1,19 @@
+# Lokale Terraform Daten
+.terraform/
+*.tfstate
+*.tfstate.*
+.terraform.lock.hcl
+
+# Terraform Crash Logs
+crash.log
+
+# Sensible oder temporäre Dateien
+*.tfvars
+*.tfvars.json
+*.backup
+
+# IDE-spezifische Dateien (optional, falls du VSCode oder andere Tools nutzt)
+.vscode/
+.idea/
+*.swp
+*.swo
