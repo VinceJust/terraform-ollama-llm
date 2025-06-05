@@ -17,3 +17,5 @@ crash.log
 .idea/
 *.swp
 *.swo
+
+modules/ollama_service/volumes/models/*
