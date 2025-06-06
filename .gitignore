@@ -19,3 +19,4 @@ crash.log
 *.swo
 
 modules/ollama_service/volumes/models/*
+modules/**/volumes/**

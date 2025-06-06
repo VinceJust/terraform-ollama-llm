@@ -9,6 +9,16 @@ Dieses Terraform-Projekt stellt eine lokale LLM-Entwicklungsumgebung bereit, bes
 
 Die Infrastruktur wird vollständig mit Terraform verwaltet und umfasst Container, Netzwerk, optional persistente Volumes und modulare Konfiguration.
 
+## Terraform AWS S3 Research
+
+Diese Aufgabe befindet sich im Unterverzeichnis [`aws-s3-research/`](aws-s3-research/).
+
+Inhalte:
+- Nutzung des AWS Providers
+- Erstellung eines S3 Buckets via Terraform
+- Dokumentation, Screenshots und Beispielkonfiguration
+
+
 ## Ziel und Motivation
 
 Ziel war es, einen **nicht-trivialen Infrastructure-as-Code-Anwendungsfall** umzusetzen, der mehrere Ressourcen, Parameterisierung, Wiederverwendbarkeit und den vollständigen Terraform-Workflow abbildet.
