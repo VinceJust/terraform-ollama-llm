@@ -95,6 +95,49 @@ Die folgenden Screenshots dokumentieren die erfolgreiche Ausführung:
 ### Open WebUI Interface
 ![Browser Interface](screenshots/browser.png)
 
+## Remote State Konfiguration (AWS S3)
+
+Zur Verwaltung des Terraform-Zustands wurde ein Remote Backend auf AWS S3 eingerichtet, um Teamarbeit zu ermöglichen und lokale Datenverluste zu vermeiden.
+
+### Vorteile
+
+- Zentrale Speicherung des State-Files
+- Verbesserte Teamfähigkeit (Shared Infrastructure-as-Code)
+- Sicherheit durch S3-Versionierung und optionaler Verschlüsselung
+
+### Konfiguration (backend.tf)
+
+```hcl
+terraform {
+  backend "s3" {
+    bucket = "terraform-ollama-state-vin"
+    key    = "ollama-project.tfstate"
+    region = "eu-central-1"
+  }
+}
+```
+
+### Migration und Initialisierung
+
+Nach dem Hinzufügen des backend Blocks wurde `terraform init` ausgeführt. Terraform erkannte den vorhandenen lokalen State und bot an, diesen ins Remote Backend zu migrieren. Die Migration wurde bestätigt und erfolgreich abgeschlossen.
+
+### Validierung des Remote State
+
+- Die Datei `ollama-project.tfstate` ist im S3-Bucket `terraform-ollama-state-vin` sichtbar
+- Die Ausführung von `terraform state list` listet die Ressourcen korrekt aus dem Remote Backend auf
+- Der lokale State (`terraform.tfstate`) wurde durch einen kleinen Verweis ersetzt und verbleibt nicht mehr als vollständige Datei im Verzeichnis
+
+### Screenshots Remote State
+
+#### S3 Bucket mit State-Datei
+![S3 State](screenshots/s3state.png)
+
+#### Terraform Init mit Remote State
+![Init S3](screenshots/init-s3.png)
+
+#### State List Ausgabe
+![State List](screenshots/statelist.png)
+
 ## Bekannte Probleme und Offene Punkte
 
 ### Modell-Persistenz
