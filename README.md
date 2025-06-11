@@ -1,14 +1,5 @@
 # Terraform Ollama LLM Environment
 
-## Projektbeschreibung
-
-Dieses Terraform-Projekt stellt eine lokale LLM-Entwicklungsumgebung bereit, bestehend aus zwei zentralen Services:
-
-- **Ollama**: LLM-Inferenzserver zur Nutzung und Verwaltung lokal gespeicherter Sprachmodelle
-- **Open WebUI**: Benutzerfreundliche Oberfläche zur Interaktion mit Ollama-Modellen im Browser
-
-Die Infrastruktur wird vollständig mit Terraform verwaltet und umfasst Container, Netzwerk, optional persistente Volumes und modulare Konfiguration.
-
 ## Terraform AWS VPC & EC2
 
 Diese Aufgabe befindet sich im Unterverzeichnis [`aws-vpc-ec2/`](aws-vpc-ec2/).
@@ -19,6 +10,15 @@ Inhalte:
 - Vollständiger Terraform-Workflow (`init`, `plan`, `apply`, `destroy`)
 - Dokumentation der Ergebnisse mit Screenshots
 - Beantwortung der Reflexionsfragen in [`aws-vpc-ec2/aws-vpc-ec2.md`](aws-vpc-ec2/aws-vpc-ec2.md)
+
+## Projektbeschreibung
+
+Dieses Terraform-Projekt stellt eine lokale LLM-Entwicklungsumgebung bereit, bestehend aus zwei zentralen Services:
+
+- **Ollama**: LLM-Inferenzserver zur Nutzung und Verwaltung lokal gespeicherter Sprachmodelle
+- **Open WebUI**: Benutzerfreundliche Oberfläche zur Interaktion mit Ollama-Modellen im Browser
+
+Die Infrastruktur wird vollständig mit Terraform verwaltet und umfasst Container, Netzwerk, optional persistente Volumes und modulare Konfiguration.
 
 ## Ziel und Motivation
 
