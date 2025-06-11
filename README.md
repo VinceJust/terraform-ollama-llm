@@ -9,15 +9,16 @@ Dieses Terraform-Projekt stellt eine lokale LLM-Entwicklungsumgebung bereit, bes
 
 Die Infrastruktur wird vollständig mit Terraform verwaltet und umfasst Container, Netzwerk, optional persistente Volumes und modulare Konfiguration.
 
-## Terraform AWS S3 Research
+## Terraform AWS VPC & EC2
 
-Diese Aufgabe befindet sich im Unterverzeichnis [`aws-s3-research/`](aws-s3-research/).
+Diese Aufgabe befindet sich im Unterverzeichnis [`aws-vpc-ec2/`](aws-vpc-ec2/).
 
 Inhalte:
-- Nutzung des AWS Providers
-- Erstellung eines S3 Buckets via Terraform
-- Dokumentation, Screenshots und Beispielkonfiguration
-
+- Definition einer VPC, eines Subnetzes, einer Sicherheitsgruppe und einer EC2-Instanz mit Terraform
+- Nutzung impliziter Abhängigkeiten zur Steuerung der Ressourcenreihenfolge
+- Vollständiger Terraform-Workflow (`init`, `plan`, `apply`, `destroy`)
+- Dokumentation der Ergebnisse mit Screenshots
+- Beantwortung der Reflexionsfragen in [`aws-vpc-ec2/aws-vpc-ec2.md`](aws-vpc-ec2/aws-vpc-ec2.md)
 
 ## Ziel und Motivation
 
